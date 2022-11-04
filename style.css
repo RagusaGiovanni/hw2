@@ -1,0 +1,233 @@
+.header-backend {
+    min-height: 100px;
+    background: #282828;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 4px #261b1b;
+  }
+  span{
+    position:absolute;
+    width:20px;
+    height:3px;
+    background:#ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    transition:all .3s linear;
+  }
+  span:nth-child(1){
+    margin-top:6px;
+  }
+  span:nth-child(2){
+    margin-top:12px;
+  }
+  #menuToggle
+  {
+    flex-basis:70%;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    left: -11px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #a77f7f;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 38px 13px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle:hover span
+  {
+      background: #fff;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  #menuToggle h3{
+    position: absolute;
+        top: 150px;
+        left: -90px;
+        text-align: center;
+        font-size:0.7rem;
+  }
+  #menuToggle h1{
+    position: absolute;
+      transform: translateX(300px);
+  }
+  h4{
+    font-size:1.2rem;
+  }
+  .container-itemsMenu, .container-itemsImg{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform:  translate(270px, 87px) scale(0);
+      gap: 20px;
+      width: 60rem;
+      height: 400px;
+      transition:all .3s linear;
+  
+  }
+  .container-itemsMenu p{
+    margin-top: 30px;
+    transition:all .3s linear;
+      transform:  translate(270px, 87px) scale(1);
+  }
+  .input{
+  
+        opacity: 1!important;
+        color: #ccc;
+        top: 0!important;
+        background: transparent;
+        border: none;
+        font-size: 1.6rem;
+        width: auto!important;
+  }
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-2px, -1px);
+    background: #fff;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(45deg) translate(-8px, -7px);
+  
+  }
+  #menuToggle input:checked ~ .sidebar{
+    transform:translateX(-60px) translateY(30px);
+  }
+  #menuToggle input:checked ~ .sidebar #iconaUser{
+  
+    transform: scale(3.9) translate(-25px, 20px);
+  }
+  #menuToggle input:checked ~ .sidebar .icone{
+    margin-top:200px;
+    transform: scale(1.5) translate(-114px, 30px);
+  }
+  #menuToggle input:checked ~ .sidebar .icone-menu{
+    margin-top:250px;
+    transform: scale(1.5) translate(-114px, 30px);
+  }
+  
+  #menuToggle input:checked ~ .sidebar h3{
+    transform: scale(1.5) translate(115px, 20px);
+  }
+  .comparsa{
+    transform:translate(270px, 87px) scale(1)!important;
+  }
+  #cover{
+      width: 600px;
+      height: auto;
+      border-radius: 0;
+      transform: translate(0, -375px);
+      position: absolute;
+      border: 2px solid #548082;
+      border-radius: 20px;
+      box-shadow:2px 4px 5px #548082;
+  }
+  #addImg{
+    cursor:pointer;
+      position: absolute;
+      font-size: 3rem;
+      transform: translate(278px, -410px);
+      background: #548082;
+      border-radius: 10px;
+      color: #edf5ed;
+      padding: 5px;
+      transition:all .3s linear;
+  }
+  #addImg:hover{
+    transform:translate(278px, -410px) scale(0.8);
+  }
+  
+  .pulsanti{
+    flex-basis:20%;
+  }
+  .pulsante{
+    background: transparent;
+    height: 40px;
+    border: none;
+    border:2px solid #548082;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition:all .3s linear;
+  }
+  .pulsante-logout{position:absolute;margin-left:20px;}
+  .pulsante:hover{
+    border:2px solid #fff;
+  }
+  #backend{
+    overflow: hidden;
+    color:#ccc;
+    background:#1f1f1f;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+  }
+  .sidebar{
+    position: absolute;
+    background:#282828;
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    height:100vh;
+    box-shadow: 2px 3px 4px #261b1b;
+    transition:all .3s linear;
+    transform: translateX(-244px) translateY(30px);
+  }
+  .sidebar #iconaUser, .icone, .icone-menu{
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 200px;
+      top: 20px;
+      transition:all .3s linear;
+  
+  }
+  .sidebar .icone{
+    margin-top: 50px;
+  
+  }
+  .sidebar .icone-menu{
+    margin-top: 100px;
+  }
+  
